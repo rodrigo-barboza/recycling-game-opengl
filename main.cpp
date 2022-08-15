@@ -23,7 +23,7 @@ const int VIEW_B = 1;
 const int VIEW_GAME = 2;
 const int VIEW_SCORE = 3;
 const int VIEW_LEARN = 4;
-const int SPACIAL_FUNCTIONS = 5;
+const int SPECIAL_FUNCTIONS = 5;
 
 int current_view = VIEW_A;
 

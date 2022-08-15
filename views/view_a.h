@@ -1,3 +1,4 @@
+// rodrigo é lindo
 
 void drawViewA() {
 	current_view = VIEW_A;

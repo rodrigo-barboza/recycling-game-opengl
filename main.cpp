@@ -27,9 +27,9 @@ const int SPACIAL_FUNCTIONS = 5;
 
 int current_view = VIEW_A;
 
-#include "objects_text.h"
-#include "special_functions.h"
-#include "view_a.h"
+#include "libs/objects_text.h"
+#include "libs/special_functions.h"
+#include "views/view_a.h"
            
 int main(void) {
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);     

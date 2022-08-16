@@ -3,6 +3,9 @@
 #include <GL/glut.h>
 
 // paletas de cores
+#define COLOR_BACKGROUND  glColor3f(0.000000, 0.000000, 0.000000)
+#define COLOR_FONT_MENU   glColor3f(1.000000, 1.000000, 1.000000)
+#define COLOR_BLUE_MENU   glColor3f(0.000000, 0.362000, 0.832000)
 #define SLATE_BLUE 	      glColor3f(0.000000, 0.498000, 1.000000)
 #define STEEL_BLUE 	      glColor3f(0.137300, 0.419600, 0.556900)
 #define AQUAMARINE 	      glColor3f(0.439200, 0.858800, 0.576500)

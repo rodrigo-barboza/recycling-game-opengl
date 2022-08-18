@@ -34,6 +34,8 @@ void drawViewA() {
 		glLineWidth(2); // define a espessura da linha
 		drawTextStroke(GLUT_STROKE_ROMAN,"APRENDER");
 	glPopMatrix();
-
+	
+	DesenhaTexto(texto);
+	
 	glFlush();
 }

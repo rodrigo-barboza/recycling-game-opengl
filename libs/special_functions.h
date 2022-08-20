@@ -8,10 +8,9 @@ void keyboardEvents(int key, int x, int y) {
 	glutPostRedisplay();
 }
 
-void moveMouse(int x, int y)
-{
+void moveMouse(int x, int y) {
 	 system("cls");
-     printf("\n(%d,%d)", x, y);
+     printf("\n(%d,%d) ", x, y);
      glutPostRedisplay();
 }
 

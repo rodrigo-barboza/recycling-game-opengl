@@ -31,8 +31,7 @@ const int VIEW_LEARN = 4;
 const int SPECIAL_FUNCTIONS = 5;
 const int VIEW_TUTORIAL = 6;
 
-int current_view=VIEW_A;
-
+int current_view = VIEW_A;
 
 #include "libs/objects_text.h"
 #include "libs/special_functions.h"

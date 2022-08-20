@@ -35,7 +35,5 @@ void drawViewA() {
 		drawTextStroke(GLUT_STROKE_ROMAN,"APRENDER");
 	glPopMatrix();
 	
-	DesenhaTexto(texto);
-	
 	glFlush();
 }

@@ -52,7 +52,7 @@ int main(void) {
 	glutMouseFunc(mouseEvents);   	
 	glutSpecialFunc(keyboardEvents);
 	glutKeyboardFunc (keyboard);
-	glutPassiveMotionFunc(MoveMouse);
+	glutPassiveMotionFunc(moveMouse);
 	glutMainLoop();
 	return 0;
 }

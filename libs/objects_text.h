@@ -22,22 +22,21 @@ void drawArrow(){
 	glMatrixMode(GL_MODELVIEW);
 	
 	glBegin(GL_TRIANGLES);
-
-    glVertex2f(320.0,215.0);
-    glVertex2f(340.0,230.0);
-    glVertex2f(320.0,245.0);
-
+	    glVertex2f(320.0,215.0);
+	    glVertex2f(340.0,230.0);
+	    glVertex2f(320.0,245.0);
     glEnd();
 
 }
 
 void drawText(void *font, char *string) {
-	while(*string){
+	while(*string) {
 		glutBitmapCharacter(GLUT_BITMAP_9_BY_15, *string++);
 	}
 }
 
 void drawTextStroke(void *font, char *string) {
-	while(*string)
+	while(*string) {
 		glutStrokeCharacter(GLUT_STROKE_ROMAN,*string++); 
+	}
 }

@@ -4,7 +4,7 @@ void drawViewA() {
 	COLOR_BACKGROUND;
 	glClear(GL_COLOR_BUFFER_BIT);
 	
-    COLOR_BLUE_MENU;
+    COLOR_GREEN;
     drawSquare(250, 98, 250, 156);
     drawSquare(250, 98, 250, 250);
 

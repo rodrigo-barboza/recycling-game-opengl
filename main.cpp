@@ -19,6 +19,8 @@
 #define VIOLET_BG 	      glClearColor(0.309800, 0.184300, 0.309800, 0.000000)
 #define DARK_ORCHID_BG 	  glClearColor(0.600000, 0.196100, 0.800000, 0.000000)
 
+using namespace std;
+
 const int WINDOWS_WIDTH = 750;
 const int WINDOWS_HEIGHT = 500;
 const int VIEW_A = 0;
@@ -27,20 +29,28 @@ const int VIEW_GAME = 2;
 const int VIEW_SCORE = 3;
 const int VIEW_LEARN = 4;
 const int SPECIAL_FUNCTIONS = 5;
+const int OBJECTS_PER_LEVEL = 5;
 
+int current_object = 1;
+char* current_object_name = "garrafa PET";
 int current_view = VIEW_A;
+float object_scale = 1;
+float object_scale_factor = .15;
+//float object_scale_factor = 10;
 
 #include "libs/objects_text.h"
-#include "libs/special_functions.h"
 #include "views/view_a.h"
-           
+#include "views/view_game.h"
+#include "libs/special_functions.h"
+
 int main(void) {
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);     
 	glutInitWindowSize(WINDOWS_WIDTH, WINDOWS_HEIGHT);  
 	glutCreateWindow("Jogo da Reciclagem"); 
  	gluOrtho2D(0, WINDOWS_WIDTH, WINDOWS_HEIGHT,0);
  	
-	glutDisplayFunc(drawViewA);  
+//	glutDisplayFunc(drawViewA);  
+	glutDisplayFunc(drawViewGame);
 	
 	glutSpecialFunc(keyboardEvents);
 	glutMouseFunc(mouseEvents);

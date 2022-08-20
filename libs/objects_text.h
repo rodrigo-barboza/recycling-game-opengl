@@ -20,7 +20,7 @@ void drawSquare(int width, int height, int shamt_x, int shamt_y) {
 
 void drawText(void *font, char *string) {
 	while(*string)
-		glutBitmapCharacter(GLUT_BITMAP_9_BY_15, *string++); 
+		glutBitmapCharacter(font, *string++); 
 }
 
 void drawTextStroke(void *font, char *string) {  

@@ -19,6 +19,10 @@
 #define VIOLET_BG 	      glClearColor(0.309800, 0.184300, 0.309800, 0.000000)
 #define DARK_ORCHID_BG 	  glClearColor(0.600000, 0.196100, 0.800000, 0.000000)
 
+// textura
+#define STB_IMAGE_IMPLEMENTATION
+
+
 using namespace std;
 
 const int WINDOWS_WIDTH = 750;
@@ -37,9 +41,12 @@ int current_view = VIEW_A;
 float object_scale = 1;
 float object_scale_factor = .15;
 //float object_scale_factor = 10;
+GLuint textureId[15]; // 15 ids para cada textura/imagem
 
+#include "libs/stb_image.h"
+#include "textures/texture.h"
 #include "libs/objects_text.h"
-#include "views/view_a.h"
+//#include "views/view_a.h"
 #include "views/view_game.h"
 #include "libs/special_functions.h"
 
@@ -57,6 +64,9 @@ int main(void) {
 	glutKeyboardFunc (keyboard);
 	  
 	glutMainLoop();
+	
+	glDisable(GL_TEXTURE_2D);
+	glDeleteTextures(15, textureId);
 	return 0;
 }
 

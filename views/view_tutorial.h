@@ -1,6 +1,5 @@
 
 void tutorialText();
-void tutorialTextGenerator();
 
 void drawViewTutorial() {
 	current_view = VIEW_TUTORIAL;
@@ -22,7 +21,6 @@ void drawViewTutorial() {
 	glPopMatrix();
 	
 	tutorialText();
-	//tutorialTextGenerator();
 	
 	COLOR_FONT_MENU;
 	glPushMatrix();	
@@ -72,22 +70,4 @@ void tutorialText(){
 	
 
 	//------------------------------------------------------------------------------------------------------------
-}
-void tutorialTextGenerator(){
-	int y_pos = 500;
-	
-	
-	for(int i=0;i<12;i++){
-		glPushMatrix();			
-			y_pos+=115;
-			COLOR_FONT_MENU;
-			glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-			glTranslatef(330, y_pos, 0);
-			glRotatef(180, 1,0,0); // rotaciona o texto
-			glLineWidth(1.5); // define a espessura da linha
-			drawTextStroke(GLUT_STROKE_ROMAN,"viverra, ullamcorper turpis id, tristique sema.");
-		glPopMatrix();
-	}
-	
-
 }

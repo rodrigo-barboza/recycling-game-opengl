@@ -3,7 +3,8 @@ void drawViewGame() {
 	current_view = VIEW_GAME;
 	DARK_SLATE_BG;
 	glClear(GL_COLOR_BUFFER_BIT);
-
+	int random;
+	
 	COLOR_FONT_MENU;
 	glPushMatrix();	
 		glRasterPos3f(10, 20, 0);
@@ -26,13 +27,10 @@ void drawViewGame() {
     	drawSquare(400, 600, 10, 90);
     glPopMatrix();
     
-    CORAL;
-//    glRotatef(20,1,0,0);
-    //		glTranslatef(10,10,10);
     glPushMatrix();
-    	glRotatef(50, object_scale, object_scale/2, 0);
-    	drawSquare(100, 150, 200, 120);
+    	applyTexture(4);
     glPopMatrix();
+    
     
 	glFlush();
 }

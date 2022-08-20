@@ -45,25 +45,25 @@ void applyTexture(int random) {
 	
 	glTranslatef(85, 20, 0);
 	// Papel Reciclavel
-	loadImage(textureId[0],"images/caixaPapelao.jpg");
-	loadImage(textureId[1],"images/sacoPapel.jpg");
-	loadImage(textureId[2],"images/folhaPapel.jpg");
+	loadImage(textureId[0],"textures/images/caixaPapelao.jpg");
+	loadImage(textureId[1],"textures/images/sacoPapel.jpg");
+	loadImage(textureId[2],"textures/images/folhaPapel.jpg");
 	// Vidro Reciclavel
-	loadImage(textureId[3],"images/copoQuebrado.jpg");
-	loadImage(textureId[4],"images/garrafaCerveja.png");
-	loadImage(textureId[5],"images/tacaQuebrada.jpg");
+	loadImage(textureId[3],"textures/images/copoQuebrado.jpg");
+	loadImage(textureId[4],"textures/images/garrafaCerveja.png");
+	loadImage(textureId[5],"textures/images/tacaQuebrada.jpg");
 	// Metal Reciclavel
-	loadImage(textureId[6],"images/tampagarrafa.jpg");
-	loadImage(textureId[7],"images/latasAmassadas.jpg");
-	loadImage(textureId[8],"images/latavelha.jpg");
+	loadImage(textureId[6],"textures/images/tampagarrafa.jpg");
+	loadImage(textureId[7],"textures/images/latasAmassadas.jpg");
+	loadImage(textureId[8],"textures/images/latavelha.jpg");
 	// Plastico Reciclavel
-	loadImage(textureId[9],"images/garrafaPET.jpg");
+	loadImage(textureId[9],"textures/images/garrafaPET.jpg");
 	loadImage(textureId[10],"textures/images/embalagemPlastica.jpg");
-	loadImage(textureId[11],"images/sacosPlasticos.png");
+	loadImage(textureId[11],"textures/images/sacosPlasticos.png");
 	// Nao Reciclavel
-	loadImage(textureId[12],"images/espelhoQuebrado2.jpg");
-	loadImage(textureId[13],"images/lampadaQueimada.jpg");
-	loadImage(textureId[14],"images/esponjaDeAco.jpg");
+	loadImage(textureId[12],"textures/images/espelhoQuebrado2.jpg");
+	loadImage(textureId[13],"textures/images/lampadaQueimada.jpg");
+	loadImage(textureId[14],"textures/images/esponjaDeAco.jpg");
 	    
     
 	drawTextureField(225, 525, 10, 90, textureId[10]);

@@ -32,16 +32,12 @@ void drawArrow(){
 }
 
 void drawText(void *font, char *string) {
-	
 	while(*string){
 		glutBitmapCharacter(GLUT_BITMAP_9_BY_15, *string++);
 	}
-		 
 }
 
-void drawTextStroke(void *font, char *string) {  
-	// Exibe caractere a caractere
-	
+void drawTextStroke(void *font, char *string) {
 	while(*string)
 		glutStrokeCharacter(GLUT_STROKE_ROMAN,*string++); 
 }

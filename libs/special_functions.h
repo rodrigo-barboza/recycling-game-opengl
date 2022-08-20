@@ -8,6 +8,13 @@ void keyboardEvents(int key, int x, int y) {
 	glutPostRedisplay();
 }
 
+
+void moveMouse(int x, int y) {
+	 system("cls");
+     printf("\n(%d,%d) ", x, y);
+     glutPostRedisplay();
+}
+
 void mouseEvents (int button, int state, int x, int y) {
 	if (current_view == VIEW_A) {
 		if (button == GLUT_LEFT_BUTTON) {

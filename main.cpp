@@ -19,6 +19,8 @@
 #define FIREBRICK			glColor3f(0.556900, 0.137300, 0.137300)
 #define ORCHID				glColor3f(0.858800, 0.439200, 0.858800)
 #define CORAL				glColor3f(1.000000, 0.498000, 0.000000)
+#define SPRING_GREEN 		glColor3f(0.000000, 1.000000, 0.498000)
+#define RED			 		glColor3f(1.000000, 0.000000, 0.000000)
 
 #define COLOR_BACKGROUND	glClearColor(0.003920, 0.050980, 0.003920, 0.000000)
 #define DARK_SLATE_BG		glClearColor(0.419600, 0.137300, 0.556900, 0.000000)
@@ -40,6 +42,8 @@ const int VIEW_LEARN = 4;
 const int SPECIAL_FUNCTIONS = 5;
 const int VIEW_TUTORIAL = 6;
 const int OBJECTS_PER_LEVEL = 5;
+const int SELECT_OPTION_ORIGIN_Y = 120;
+CONST int SELECT_OPTION_STEP = 50;
 
 vector <Object> objects;
 int current_view = VIEW_A;
@@ -47,8 +51,15 @@ int current_view = VIEW_A;
 int   current_object = 1;
 int   current_object_pos = 0;
 int   current_object_point;
-char current_object_category[50];
-char current_object_name[50];
+char  current_object_category[50];
+char  current_object_name[50];
+int   select_option_x = 710;
+int   select_option_y = SELECT_OPTION_ORIGIN_Y;
+int   current_score = 0;
+int   score_should_be = 0;
+float percent_score = 0.0;
+bool  can_redisplay = true;
+bool  has_match = NULL;
 
 #include "libs/objects_text.h"
 #include "libs/stb_image.h"
@@ -72,8 +83,6 @@ int main(void) {
 	glutSpecialFunc(keyboardEvents);
 	glutKeyboardFunc (keyboard);
 //	glutPassiveMotionFunc(moveMouse);
-	
-	glDisable(GL_TEXTURE_2D);
 
 	GLuint textures[objects.size()]; 
 	for (int pos = 0; pos < objects.size(); pos++) {

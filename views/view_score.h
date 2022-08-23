@@ -11,29 +11,60 @@ void drawViewScore() {
 
 	COLOR_FONT_MENU;
 	glPushMatrix();	
-		glTranslatef(300, 50, 0);
+		glTranslatef(280, 50, 0);
 		glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
 		glRotatef(180, 1,0,0); // rotaciona o texto
 		glLineWidth(3); // define a espessura da linha
 		drawTextStroke(GLUT_STROKE_ROMAN,"PONTUACAO");
 	glPopMatrix();
 	
-	glPushMatrix();	
-		glTranslatef(200, 100, 0);
-		glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(3); // define a espessura da linha
-		drawTextStroke(GLUT_STROKE_ROMAN,"PARABENS, VOCE ACERTOU:");
-	glPopMatrix();
-	
-	glPushMatrix();	
-		LIGHT_GREEN;
-		glTranslatef(330, 150, 0);
-		glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(3); // define a espessura da linha
-		drawTextStroke(GLUT_STROKE_ROMAN,"556/560");
-	glPopMatrix();
+	if (percent_score > 60) {
+		glPushMatrix();	
+			glTranslatef(200, 100, 0);
+			glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
+			glRotatef(180, 1,0,0); // rotaciona o texto
+			glLineWidth(3); // define a espessura da linha
+			drawTextStroke(GLUT_STROKE_ROMAN,"PARABENS, VOCE ACERTOU:");
+		glPopMatrix();
+		
+		glPushMatrix();	
+			LIGHT_GREEN;
+			glTranslatef(300, 150, 0);
+			glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
+			glRotatef(180, 1,0,0); // rotaciona o texto
+			glLineWidth(3); // define a espessura da linha
+			char text_x[100];
+			sprintf(text_x, "%i/%i", current_score, score_should_be);
+			drawTextStroke(GLUT_STROKE_ROMAN, text_x);
+		glPopMatrix();
+	} else {
+		glPushMatrix();	
+			glTranslatef(200, 100, 0);
+			glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
+			glRotatef(180, 1,0,0); // rotaciona o texto
+			glLineWidth(3); // define a espessura da linha
+			drawTextStroke(GLUT_STROKE_ROMAN,"CONTINUE PRATICANDO");
+		glPopMatrix();
+
+		glPushMatrix();	
+			glTranslatef(250, 135, 0);
+			glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
+			glRotatef(180, 1,0,0); // rotaciona o texto
+			glLineWidth(3); // define a espessura da linha
+			drawTextStroke(GLUT_STROKE_ROMAN,"VOCE ACERTOU:");
+		glPopMatrix();
+		
+		glPushMatrix();	
+			RED;
+			glTranslatef(300, 170, 0);
+			glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
+			glRotatef(180, 1,0,0); // rotaciona o texto
+			glLineWidth(3); // define a espessura da linha
+			char text_z[100];
+			sprintf(text_z, "%i/%i", current_score, score_should_be);
+			drawTextStroke(GLUT_STROKE_ROMAN, text_z);
+		glPopMatrix();
+	}
 	
 	COLOR_FONT_MENU;
 	glPushMatrix();	

@@ -152,12 +152,17 @@ void loadImage(GLuint tex_id, std::string file_path) {
 
 void applyTexture() {
 	glEnable(GL_TEXTURE_2D);
-	glTexEnvf(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_REPLACE);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
 	glTranslatef(85, 20, 0);
 	GLuint textures[1]; 
-	current_object_pos = getRandomRange();
+
+	if (can_redisplay) {
+		current_object_pos = getRandomRange();
+	}
+	
 	textures[current_object] = objects.at(current_object_pos).texture;
 	glGenTextures(1, textures);
 	loadImage(objects.at(current_object_pos).texture, objects.at(current_object_pos).getObjectPath());
 	drawTextureField(225, 525, 10, 90, objects.at(current_object_pos).texture);
+	glDisable(GL_TEXTURE_2D);
 }

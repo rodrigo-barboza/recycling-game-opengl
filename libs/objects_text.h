@@ -45,7 +45,7 @@ void drawSelectionText() {
 	titles.push_back("Coletor de Plastico");
 	titles.push_back("Coletor de Metal");
 	titles.push_back("Coletor de Vidro");
-	titles.push_back("Não reciclável");
+	titles.push_back("Nao reciclavel");
 
 	for (int c = 0, step = 0; c < titles.size(); c++, step += 50) {
 		glPushMatrix();	

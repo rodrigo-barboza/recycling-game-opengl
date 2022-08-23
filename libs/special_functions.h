@@ -1,6 +1,9 @@
 #include <string>
 #include <map>
 
+void menuGame(int);
+void createMenu();
+
 void nextObject() {
 	if (current_object <= (OBJECTS_PER_LEVEL-1))
 		current_object++;
@@ -28,7 +31,7 @@ void keyboardEvents(int key, int x, int y) {
 
 
 // void moveMouse(int x, int y) {
-// 	system("cls"); 
+//  	system("clear"); 
 //     printf("\n(%d,%d) ", x, y);
 // }
 
@@ -56,11 +59,28 @@ void mouseEvents (int button, int state, int x, int y) {
 		 		glutPostRedisplay();
 			}
 
+			 //BOTÃO MENU NA VIEW_E
+			 if(x>=601 && x<=697  && y>=420 && y<=468 && current_view == VIEW_E) {
+		 	 	current_view = VIEW_A;
+			 	glutDisplayFunc(drawViewA);
+		 	 	glutPostRedisplay();
+			}
+
+			//BOTĂO NEXT NA VIEW_B
+			if(x>=601 && x<=697  && y>=420 && y<=468 && current_view == VIEW_B) {
+		 		current_view = VIEW_E;
+				glutDisplayFunc(drawViewE);
+		 		glutPostRedisplay();
+			}
+
 			//BOTĂO NEXT NA VIEW_LEARN
 			if(x>=601 && x<=697  && y>=420 && y<=468 && current_view == VIEW_LEARN) {
 		 		current_view = VIEW_B;
+				glutDisplayFunc(drawViewB);
 		 		glutPostRedisplay();
 			}
+
+	
 
 			//BOTĂO JOGAR NOVAMENTE NA VIEW_SCORE
 			if(x>=225 && x<=520  && y>=256 && y<=303 && current_view == VIEW_SCORE) {
@@ -76,6 +96,16 @@ void mouseEvents (int button, int state, int x, int y) {
 		 		glutPostRedisplay();
 			}
 		}
+	}
+	
+	if(button == GLUT_RIGHT_BUTTON) {
+		if (state == GLUT_DOWN) {
+	 		if(current_view == VIEW_GAME) {
+				can_redisplay = false;
+	 			createMenu();
+	 			glutPostRedisplay();
+	 		}
+	 	}
 	}
 }
 
@@ -126,3 +156,38 @@ void keyboard (unsigned char key, int x, int y) {
 	if (key == 27) // ESC PARA SAIR
 		exit(0);		
 }
+
+void createMenu() {
+	int menu;
+
+	menu = glutCreateMenu(menuGame);
+	glutAddMenuEntry("Reiniciar Partida", 0);
+	glutAddMenuEntry("Aprender", 1);
+	glutAddMenuEntry("Voltar ao Menu", 2);
+
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
+
+}
+
+void menuGame(int option_menu) {
+	switch(option_menu) {
+		case 0:
+			current_view = VIEW_TUTORIAL;
+			current_score = 0;
+			current_object = 1;
+			glutDisplayFunc(drawViewTutorial);
+			break;
+		case 1:
+			current_view = VIEW_LEARN;
+			glutDisplayFunc(drawViewLearn);
+			break;
+		case 2:
+			current_view = VIEW_A;
+			glutDisplayFunc(drawViewA);
+			break;
+	}
+
+	glutPostRedisplay();
+}
+
+

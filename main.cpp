@@ -41,9 +41,10 @@ const int VIEW_SCORE = 3;
 const int VIEW_LEARN = 4;
 const int SPECIAL_FUNCTIONS = 5;
 const int VIEW_TUTORIAL = 6;
+const int VIEW_E = 7;
 const int OBJECTS_PER_LEVEL = 5;
 const int SELECT_OPTION_ORIGIN_Y = 120;
-CONST int SELECT_OPTION_STEP = 50;
+const int SELECT_OPTION_STEP = 50;
 
 vector <Object> objects;
 int current_view = VIEW_A;
@@ -69,6 +70,8 @@ bool  has_match = NULL;
 #include "views/view_score.h"       
 #include "views/view_learn.h"  
 #include "views/view_tutorial.h"  
+#include "views/view_b.h"
+#include "views/view_e.h"
 #include "libs/special_functions.h"
 
 int main(void) {

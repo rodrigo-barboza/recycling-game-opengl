@@ -100,13 +100,15 @@ void mouseEvents (int button, int state, int x, int y) {
 	
 	if(button == GLUT_RIGHT_BUTTON) {
 		if (state == GLUT_DOWN) {
+			can_redisplay = false;
 	 		if(current_view == VIEW_GAME) {
-				can_redisplay = false;
 	 			createMenu();
 	 			glutPostRedisplay();
 	 		}
 	 	}
 	}
+
+    
 }
 
 void verifyObject() {
@@ -152,6 +154,7 @@ void keyboard (unsigned char key, int x, int y) {
 		 	glutPostRedisplay();
 		}
 	}
+	can_redisplay = false;
 
 	if (key == 27) // ESC PARA SAIR
 		exit(0);		

@@ -1,3 +1,15 @@
+// --------------------------------------------------------------------
+// Jogo da Reciclagem - OpenGL
+// Disciplina: Computação Gráfica
+// Última modificação: 23/08/2022
+// --------------------------------------------------------------------
+// Alunos: 
+// 		Edson Barbosa
+//		Filipe Alves
+//		Francisco Luan
+// 		Rodrigo Leandro
+// --------------------------------------------------------------------
+
 #include <iostream>
 #include <cstdlib>
 #include <vector>

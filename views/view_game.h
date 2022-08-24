@@ -22,8 +22,8 @@ void drawViewGame() {
 	COLOR_FONT_MENU;
 	glPushMatrix();	
 		glRasterPos3f(10, 20, 0);
-		glScalef(0.15, 0.15, 0.15); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
+		glScalef(0.15, 0.15, 0.15);
+		glRotatef(180, 1,0,0);
 		
 		char text_a[12];
 		sprintf(text_a, "OBJETO %i/%i", current_object, OBJECTS_PER_LEVEL);
@@ -33,8 +33,8 @@ void drawViewGame() {
 	COLOR_FONT_MENU;
 	glPushMatrix();	
 		glRasterPos3i(420, 100, 0);
-		glScalef(0.15, 0.15, 0.15); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
+		glScalef(0.15, 0.15, 0.15);
+		glRotatef(180, 1,0,0);
 		drawText(GLUT_BITMAP_HELVETICA_12, "COMO DEVO DESCARTAR?");
 	glPopMatrix();
 
@@ -52,8 +52,8 @@ void drawViewGame() {
 	COLOR_FONT_MENU;
 	glPushMatrix();	
 		glRasterPos3i(420, 370, 0);
-		glScalef(0.15, 0.15, 0.15); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
+		glScalef(0.15, 0.15, 0.15);
+		glRotatef(180, 1,0,0);
 		drawText(GLUT_BITMAP_HELVETICA_12, "ENTER PARA CONFIRMAR");
 	glPopMatrix();
 

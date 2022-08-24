@@ -8,15 +8,14 @@ void drawViewLearn() {
 	glClear(GL_COLOR_BUFFER_BIT);
 	
     COLOR_GREEN;
-    //width, height, X position, Y position
     drawSquare(100, 98, 600, 420);
 
 	COLOR_GREEN;
 	glPushMatrix();	
 		glTranslatef(300, 50, 0);
-		glScalef(0.21, 0.21, 0.21); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(3); // define a espessura da linha
+		glScalef(0.21, 0.21, 0.21);
+		glRotatef(180, 1,0,0);
+		glLineWidth(3);
 		drawTextStroke(GLUT_STROKE_ROMAN,"APRENDER");
 	glPopMatrix();
 	
@@ -32,15 +31,15 @@ void drawViewLearn() {
 }
 
 void infoText(){
-	//------------------------------------------------------------------------------------------------------------
 	int y_pos = 90;
+	
 	glPushMatrix();	
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"A Coleta Seletiva eh um mecanismo de recolha");
 	glPopMatrix();
 	  
@@ -48,9 +47,9 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"dos residuos, os quais sao classificados de ");
 	glPopMatrix();
 	
@@ -58,9 +57,9 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"acordo com sua origem e depositados em  ");
 	glPopMatrix(); 					      
 	
@@ -68,9 +67,9 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"contentores indicados por cores. Ou seja, eles ");
 	glPopMatrix();
 	 
@@ -78,9 +77,9 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"podem ser residuos organicos ou materiais  ");
 	glPopMatrix();
 										  
@@ -88,9 +87,9 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"reciclaveis como papel, plastico, vidro, dentre ");
 	glPopMatrix();
 	 
@@ -98,9 +97,9 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"outros. Alem deles, materiais hospitalares e ");
 	glPopMatrix();
 	
@@ -108,9 +107,9 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"radioativos tem um destino diferente. A coleta ");
 	glPopMatrix();
 	 
@@ -118,20 +117,18 @@ void infoText(){
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"seletiva representa a maneira ecologica mais");
 	glPopMatrix();
 	glPushMatrix();	
 		COLOR_FONT_MENU;
 		y_pos+=30;
 		glTranslatef(30, y_pos, 0);
-		glScalef(0.2, 0.2, 0.2); // diminui o tamanho do fonte
-		glRotatef(180, 1,0,0); // rotaciona o texto
-		glLineWidth(1.5); // define a espessura da linha
+		glScalef(0.2, 0.2, 0.2);
+		glRotatef(180, 1,0,0);
+		glLineWidth(1.5);
 		drawTextStroke(GLUT_STROKE_ROMAN,"adequada para o descarte de lixo.");
 	glPopMatrix();
-
-	//------------------------------------------------------------------------------------------------------------
 }

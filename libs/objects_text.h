@@ -1,5 +1,12 @@
 #include <string>
 
+void drawSquare(int, int, int, int);
+void drawArrow();
+void drawText(void*, char*);
+void drawTextStroke(void*, char*);
+void drawSelectionText();
+void changeScoreIfMatch();
+
 void drawSquare(int width, int height, int shamt_x, int shamt_y) {
 	glMatrixMode(GL_MODELVIEW);
 	
@@ -7,10 +14,10 @@ void drawSquare(int width, int height, int shamt_x, int shamt_y) {
 		glTranslated(shamt_x, shamt_y, 0); 
 	
 		glBegin(GL_POLYGON);
-			glVertex2i(0, height/2); // bottom-left
-			glVertex2i(width, height/2); // bottom-right
-			glVertex2f(width, 0); // top-right	
-			glVertex2i(0, 0); // top-left			
+			glVertex2i(0, height/2); 
+			glVertex2i(width, height/2);
+			glVertex2f(width, 0); 
+			glVertex2i(0, 0); 
 		glEnd();
 	
 	glPopMatrix(); 

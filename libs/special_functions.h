@@ -1,6 +1,11 @@
 #include <string>
 #include <map>
 
+void nextObject();
+void keyboardEvents(int, int, int);
+void mouseEvents(int, int, int, int);
+void verifyObject();
+void keyboard();
 void menuGame(int);
 void createMenu();
 
@@ -27,13 +32,6 @@ void keyboardEvents(int key, int x, int y) {
 		glutPostRedisplay();
 	}
 }
-
-
-
-// void moveMouse(int x, int y) {
-//  	system("clear"); 
-//     printf("\n(%d,%d) ", x, y);
-// }
 
 void mouseEvents (int button, int state, int x, int y) {	
 	if (button == GLUT_LEFT_BUTTON) {
@@ -186,6 +184,8 @@ void menuGame(int option_menu) {
 			break;
 		case 2:
 			current_view = VIEW_A;
+			current_score = 0;
+			current_object = 1;
 			glutDisplayFunc(drawViewA);
 			break;
 	}

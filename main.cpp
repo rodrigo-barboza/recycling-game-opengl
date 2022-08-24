@@ -4,10 +4,8 @@
 #include <GL/glut.h>
 #include "textures/object.h"
 
-// textura
 #define STB_IMAGE_IMPLEMENTATION
 
-// paletas de cores
 #define LIGHT_GREEN			glColor3ub(142, 191, 37);
 #define COLOR_GREEN			glColor3ub(6, 133, 90);
 
@@ -85,7 +83,6 @@ int main(void) {
 	glutMouseFunc(mouseEvents);   
 	glutSpecialFunc(keyboardEvents);
 	glutKeyboardFunc (keyboard);
-//	glutPassiveMotionFunc(moveMouse);
 
 	GLuint textures[objects.size()]; 
 	for (int pos = 0; pos < objects.size(); pos++) {
@@ -95,4 +92,3 @@ int main(void) {
 	glutMainLoop();
 	return 0;
 }
-

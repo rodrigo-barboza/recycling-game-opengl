@@ -1,5 +1,11 @@
 #include <ctime>
 
+void drawTextureField(int, int, int, int, GLuint);
+void loadObjects();
+int  getRandomRange();
+void loadImage(GLuint, std::string);
+void applyTexture();
+
 void drawTextureField(int width, int height, int shamt_x, int shamt_y, GLuint texId) {
 	glMatrixMode(GL_MODELVIEW);
 
@@ -8,10 +14,10 @@ void drawTextureField(int width, int height, int shamt_x, int shamt_y, GLuint te
 		glBindTexture(GL_TEXTURE_2D,texId);     
 
 		glBegin(GL_QUADS);
-			glTexCoord2f(0.0,1.0); glVertex2f(0, height/2); // bottom-left
-			glTexCoord2f(1.0,1.0); glVertex2f(width, height/2); // bottom-right
-			glTexCoord2f(1.0,0.0); glVertex2f(width, 0); // top-right	
-			glTexCoord2f(0.0,0.0); glVertex2f(0, 0); // top-left	
+			glTexCoord2f(0.0,1.0); glVertex2f(0, height/2);
+			glTexCoord2f(1.0,1.0); glVertex2f(width, height/2);
+			glTexCoord2f(1.0,0.0); glVertex2f(width, 0);
+			glTexCoord2f(0.0,0.0); glVertex2f(0, 0);
 		glEnd();
 	glPopMatrix(); 
 }
@@ -136,16 +142,14 @@ void loadImage(GLuint tex_id, std::string file_path) {
 	if(image_data) {
 		glBindTexture(GL_TEXTURE_2D, tex_id);
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image_data);
-	
+
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 		
 		stbi_image_free(image_data);
-	}
-	else {
+	} else {
 		cout<< "ERRO! NAO FOI POSSIVEL CARREGAR A TEXTURA!" << file_path.c_str() << endl;
 	}
 }

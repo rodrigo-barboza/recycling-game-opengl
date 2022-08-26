@@ -1,5 +1,5 @@
 # recycling-game-opengl
-Jogo da disciplina de computação gráfica sobre reciclagem feito em opengl
+Game developed in opengl about recycling and sustainability
 
 ## Aplicação: Jogo da Reciclagem
 

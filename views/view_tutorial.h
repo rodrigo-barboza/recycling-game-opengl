@@ -43,7 +43,7 @@ void tutorialText(){
 		glScalef(0.2, 0.2, 0.2);
 		glRotatef(180, 1,0,0);
 		glLineWidth(1.5);
-		drawTextStroke(GLUT_STROKE_ROMAN,"Use ARROW_UP e ARROW_DOWN para mudar");
+		drawTextStroke(GLUT_STROKE_ROMAN,"Use SETA PARA CIMA e SETA PARA BAIXO ");
 	glPopMatrix();
 	
 	glPushMatrix();	
@@ -53,7 +53,7 @@ void tutorialText(){
 		glScalef(0.2, 0.2, 0.2);
 		glRotatef(180, 1,0,0);
 		glLineWidth(1.5);
-		drawTextStroke(GLUT_STROKE_ROMAN,"de alternativa.");
+		drawTextStroke(GLUT_STROKE_ROMAN,"para mudar de alternativa.");
 	glPopMatrix();
 	
 	glPushMatrix();	
